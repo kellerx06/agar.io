@@ -38,9 +38,9 @@ function draw() {
       blobs.splice(i, 1);
    }
   }
- }
   blob.show();
   blob.update();
+ }
 }
 
   function keyPressed() {
