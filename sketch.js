@@ -22,11 +22,11 @@ function setup() {
 
 function draw() {
   if(paused) {
-    textSize(100);
-    text("PAUSED", 100, 150);
+  //do this stuff
   } else {
-    background(0);
+    //do the normal stuff
   }
+}
 
   background(0);
 
