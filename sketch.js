@@ -39,14 +39,12 @@ function draw() {
    }
   }
  }
+  blob.show();
+  blob.update();
+}
 
   function keyPressed() {
     if(key === 'p') {
       paused = true
     }
   }
-
-  blob.show();
-  blob.update();
-
-}
