@@ -44,6 +44,7 @@ function draw() {
 }
 
   function keyPressed() {
+    console.log(key);
     if(key === 'p') {
       paused = true
     }
