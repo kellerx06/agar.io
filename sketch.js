@@ -36,8 +36,9 @@ function draw() {
     blobs[i].show();
     if (blob.eats(blobs[i])) {
       blobs.splice(i, 1);
-    }
+   }
   }
+ }
 }
 
   function keyPressed() {
@@ -48,5 +49,3 @@ function draw() {
 
   blob.show();
   blob.update();
-
-}
