@@ -22,7 +22,7 @@ function setup() {
 
 function draw() {
   if(paused) {
-  //do this stuff
+    //do this stuff
   } else {
     //do the normal stuff
   }
@@ -46,7 +46,7 @@ function draw() {
   function keyPressed() {
     if(key === 'p') {
           //do pause stuff
-      paused = true
+      paused = true;
     }
   }
 
