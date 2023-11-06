@@ -45,8 +45,8 @@ function draw() {
       paused = true
     }
   }
-}
 
   blob.show();
   blob.update();
 
+}
