@@ -3,12 +3,12 @@
 // http://patreon.com/codingtrain
 // Code for: https://youtu.be/JXuxYMGe4KI
 
-var paused = false;
-
 var blob;
 
 var blobs = [];
 var zoom = 1;
+
+var paused = false;
 
 function setup() {
   createCanvas(600, 600);
@@ -22,9 +22,10 @@ function setup() {
 
 function draw() {
   if(paused) {
-//do this stuff
-  } else { 
-//do the normal stuff
+    textSize(100);
+    text("PAUSED", 100, 150);
+  } else {
+    background(0);
   }
 
   background(0);
@@ -44,6 +45,7 @@ function draw() {
 
   function keyPressed() {
     if(key === 'p') {
+          //do pause stuff
       paused = true
     }
   }
