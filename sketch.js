@@ -24,7 +24,7 @@ function draw() {
   if(paused) {
     //do this stuff
   } else {
-    background(0);
+  background(0);
 
   translate(width / 2, height / 2);
   var newzoom = 64 / blob.r;
@@ -36,14 +36,14 @@ function draw() {
     blobs[i].show();
     if (blob.eats(blobs[i])) {
       blobs.splice(i, 1);
+    }
   }
 }
-  }
 
   function keyPressed() {
     if(key === 'p') {
           //do pause stuff
-      paused = true;
+      paused = true
     }
   }
 
