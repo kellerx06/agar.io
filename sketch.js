@@ -38,6 +38,7 @@ function draw() {
       blobs.splice(i, 1);
   }
 }
+  }
 
   function keyPressed() {
     if(key === 'p') {
