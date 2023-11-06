@@ -3,6 +3,8 @@
 // http://patreon.com/codingtrain
 // Code for: https://youtu.be/JXuxYMGe4KI
 
+var paused = false;
+
 var blob;
 
 var blobs = [];
@@ -19,6 +21,12 @@ function setup() {
 }
 
 function draw() {
+  if(paused) {
+//do this stuff
+  } else { 
+//do the normal stuff
+  }
+
   background(0);
 
   translate(width / 2, height / 2);
@@ -34,6 +42,11 @@ function draw() {
     }
   }
 
+  function keyPressed() {
+    if(key === 'p') {
+      paused = true
+    }
+  }
 
   blob.show();
   blob.update();
