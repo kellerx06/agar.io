@@ -39,13 +39,14 @@ function draw() {
    }
   }
  }
-}
 
   function keyPressed() {
     if(key === 'p') {
       paused = true
     }
   }
+}
 
   blob.show();
   blob.update();
+
