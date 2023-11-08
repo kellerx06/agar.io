@@ -48,9 +48,10 @@ function draw() {
     if(key === 'p') {
       paused = true
     }
-    function keyPressed() {
-      console.log(key);
-      if(key === 'p') && (paused = true) {
-        paused = false
+
+  function keyPressed() {
+    console.log(key);
+    if(key === 'p') && (paused = true) {
+      paused = false
       }
   }
