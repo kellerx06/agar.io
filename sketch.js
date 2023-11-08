@@ -50,7 +50,7 @@ function draw() {
      }
   }
 
-  function keyPressed() {
+  function keyPressedAgain() {
     console.log(key);
     if(key === 'p' && (paused === true)) {
       paused = false
