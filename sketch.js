@@ -54,4 +54,5 @@ function draw() {
     console.log(key);
     if(key === 'p' && (paused === true)) {
       paused = false
-  }
+     }
+}
