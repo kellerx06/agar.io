@@ -52,7 +52,7 @@ function draw() {
 
   function keyPressedAgain() {
     console.log(key);
-    if(key === 'p' && (paused === true)) {
+    if(key === 'p' && paused === true) {
       paused = false
      }
 }
