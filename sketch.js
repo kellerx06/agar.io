@@ -21,7 +21,7 @@ function setup() {
 }
 
 function draw() {
-  if(paused) {
+  if (paused) {
     textSize(100) 
     fill(255, 0, 0);
     textAlign(CENTER, CENTER)
