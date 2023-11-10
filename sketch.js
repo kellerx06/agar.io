@@ -21,11 +21,14 @@ function setup() {
 }
 
 function draw() {
-    if(paused) {
-      textSize(100)
+  if(paused) {
+    textSize(100) 
+    const middleX = width/2;
+    const middleY = height/2;
+    textAlign(CENTER, CENTER)
     text('PAUSED', 100, 100);
     console.log('PAUSED');
-    } else {
+  } else {
     background(0);
 
     translate(width / 2, height / 2);
