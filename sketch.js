@@ -26,7 +26,7 @@ function draw() {
     const middleX = width/2;
     const middleY = height/2;
     textAlign(CENTER, CENTER)
-    text('PAUSED', 100, 100);
+    text('PAUSED', middleX, middleY);
     console.log('PAUSED');
   } else {
     background(0);
