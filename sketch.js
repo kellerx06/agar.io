@@ -23,9 +23,10 @@ function setup() {
 function draw() {
   if(paused) {
     textSize(100) 
+    fill(255, 0, 0);
+    textAlign(CENTER, CENTER)
     const middleX = width/2;
     const middleY = height/2;
-    textAlign(CENTER, CENTER)
     text('PAUSED', middleX, middleY);
     console.log('PAUSED');
   } else {
