@@ -23,7 +23,7 @@ function setup() {
 function draw() {
     if(paused) {
       textSize(100)
-    text('PAUSED', 50, 50);
+    text('PAUSED', 0, 0);
     console.log('PAUSED');
     } else {
     background(0);
