@@ -17,7 +17,7 @@ function setup() {
     var x = random(-width, width);
     var y = random(-height, height);
     blobs[i] = new Blob(x, y, 16);
-    fill(0, 255, 0);
+    fill(Math.floor(Math.random()*16777215).toString(16));
   }
 }
 
