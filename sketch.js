@@ -13,7 +13,7 @@ var paused = false;
 function setup() {
   createCanvas(1900, 900);
   blob = new Blob(0, 0, 64);
-  for (var i = 0; i < 200; i++) {
+  for (var i = 0; i < 500; i++) {
     var x = random(-width, width);
     var y = random(-height, height);
     blobs[i] = new Blob(x, y, 16);
