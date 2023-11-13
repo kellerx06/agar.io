@@ -11,7 +11,7 @@ var zoom = 1;
 var paused = false;
 
 function setup() {
-  createCanvas(1900, 900);
+  createCanvas(1950, 950);
   blob = new Blob(0, 0, 64);
   for (var i = 0; i < 500; i++) {
     var x = random(-width, width);
