@@ -18,6 +18,7 @@ function setup() {
     var y = random(-height, height);
     blobs[i] = new Blob(x, y, 16);
     fill(Math.floor(Math.random()*16777215).toString(16));
+    //fix using https://css-tricks.com/snippets/javascript/random-hex-color/
   }
 }
 
@@ -32,7 +33,7 @@ function draw() {
     console.log('PAUSED');
   } else {
     background(0);
-
+    fill(0, 255, 0)
     translate(width / 2, height / 2);
     var newzoom = 64 / blob.r;
     zoom = lerp(zoom, newzoom, 0.1);
