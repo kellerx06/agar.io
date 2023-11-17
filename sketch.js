@@ -2,36 +2,34 @@
 // http://codingtra.in
 // http://patreon.com/codingtrain
 // Code for: https://youtu.be/JXuxYMGe4KI
-
 var blob;
-
 var blobs = [];
 var zoom = 1;
-
 var paused = false;
 
 function setup() {
   createCanvas(1900, 1000);
-  blob = new Blob(0, 0, 64);
+  blob = new Blob(0, 0, 64, color(255, 0, 0)); // Set color for the main blob
   for (var i = 0; i < 1000; i++) {
     var x = random(-width, width);
     var y = random(-height, height);
-    blobs[i] = new Blob(x, y, 16);
+    var col = color(random(255), random(255), random(255)); // Random color for each blob
+    blobs[i] = new Blob(x, y, 16, col);
   }
 }
 
 function draw() {
   if (paused) {
-    textSize(100) 
+    textSize(100);
     fill(255, 0, 0);
-    textAlign(CENTER, CENTER)
-    const middleX = width/2;
-    const middleY = height/2;
+    textAlign(CENTER, CENTER);
+    const middleX = width / 2;
+    const middleY = height / 2;
     text('PAUSED', middleX, middleY);
     console.log('PAUSED');
   } else {
     background(0);
-    fill(255, 255, 255)
+    fill(255, 255, 255);
     translate(width / 2, height / 2);
     var newzoom = 64 / blob.r;
     zoom = lerp(zoom, newzoom, 0.1);
@@ -42,15 +40,29 @@ function draw() {
       blobs[i].show();
       if (blob.eats(blobs[i])) {
         blobs.splice(i, 1);
-    }
+      }
     }
     blob.show();
     blob.update();
- }
+  }
 }
 
-  function keyPressed() {
-    if(key === 'p') {
-      paused = !paused;
-      }
-    }
+function keyPressed() {
+  if (key === 'p') {
+    paused = !paused;
+  }
+}
+
+// Modified Blob class with color property
+function Blob(x, y, r, col) {
+  this.pos = createVector(x, y);
+  this.r = r;
+  this.col = col; // Color property
+
+  this.show = function() {
+    fill(this.col);
+    ellipse(this.pos.x, this.pos.y, this.r * 2, this.r * 2);
+  }
+
+  // Rest of the Blob class remains unchanged
+}
