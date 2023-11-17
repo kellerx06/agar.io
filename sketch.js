@@ -33,7 +33,7 @@ function draw() {
     console.log('PAUSED');
   } else {
     background(0);
-    fill(0, 255, 0)
+    fill(255, 255, 255)
     translate(width / 2, height / 2);
     var newzoom = 64 / blob.r;
     zoom = lerp(zoom, newzoom, 0.1);
