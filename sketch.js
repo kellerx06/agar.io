@@ -26,6 +26,7 @@ function setup() {
   }
   if (counter > 19) {
     myColor = color(random(255), random(255), random(255));
+    counter = 0;
   }
 }
 
