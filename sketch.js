@@ -8,6 +8,9 @@ var blob;
 var blobs = [];
 var zoom = 1;
 
+let counter = 0
+let myColor;
+
 var paused = false;
 
 function setup() {
