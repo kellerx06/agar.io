@@ -13,7 +13,7 @@ var paused = false;
 function setup() {
   createCanvas(1900, 1000);
   blob = new Blob(0, 0, 64);
-  fill(255, 255 ,0)
+  fill(r, g, b, a)
   for (var i = 0; i < 1000; i++) {
     var x = random(-width, width);
     var y = random(-height, height);
@@ -23,8 +23,6 @@ r = random(255);
 g = random(100, 200);
 b = random(100);
 a = random(200, 255);
-noStroke()
-fill(r, g, b, a);
 }
 
 function draw() {
