@@ -13,8 +13,10 @@ var paused = false;
 function setup() {
   
   createCanvas(1900, 1000);
+  myColor = color(random(255), random(255), random(255));
+  frameRate(30);
   blob = new Blob(0, 0, 64);
-  fill(255,0 ,0)
+  fill(myColor)
   for (var i = 0; i < 1000; i++) {
     var x = random(-width, width);
     var y = random(-height, height);
