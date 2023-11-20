@@ -48,7 +48,6 @@ function draw() {
     blob.show();
     blob.update();
  }
-
 r = random(255);
 g = random(100, 200);
 b = random(100);
