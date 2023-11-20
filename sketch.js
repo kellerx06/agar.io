@@ -28,6 +28,10 @@ function setup() {
 }
 
 function draw() {
+  if(counter > 19) {
+    myColor = color(random(255), random(255), random(255));
+    counter = 0)
+  }
   if (paused) {
     textSize(100) 
     fill(255, 0, 0);
