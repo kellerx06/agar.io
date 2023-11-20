@@ -19,6 +19,12 @@ function setup() {
     var y = random(-height, height);
     blobs[i] = new Blob(x, y, 16);
   }
+r = random(255);
+g = random(100, 200);
+b = random(100);
+a = random(200, 255);
+noStroke()
+fill(r, g, b, a);
 }
 
 function draw() {
@@ -48,16 +54,7 @@ function draw() {
     blob.show();
     blob.update();
  }
-r = random(255);
-g = random(100, 200);
-b = random(100);
-a = random(200, 255);
-
-noStroke()
-fill(r, g, b, a);
-rect(200, 200, 100, 100)
 }
-
 
   function keyPressed() {
     if(key === 'p') {
