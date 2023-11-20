@@ -11,6 +11,7 @@ var zoom = 1;
 var paused = false;
 
 function setup() {
+  
   createCanvas(1900, 1000);
   blob = new Blob(0, 0, 64);
   fill(r, g, b, a)
@@ -19,11 +20,12 @@ function setup() {
     var y = random(-height, height);
     blobs[i] = new Blob(x, y, 16);
   }
+}
+
 r = random(255);
 g = random(100, 200);
 b = random(100);
 a = random(200, 255);
-}
 
 function draw() {
   if (paused) {
