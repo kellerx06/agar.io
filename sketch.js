@@ -28,6 +28,7 @@ function setup() {
     myColor = color(random(255), random(255), random(255));
     counter = 0;
   }
+  counter = counter + 1;
 }
 
 function draw() {
