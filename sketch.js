@@ -73,7 +73,7 @@ function draw() {
       }
     }
 
-//function mouseMoved() {
-  //console.log(`${mouseX}, ${mouseY}`);
-  //return false;
+function mouseMoved() {
+  console.log(`${mouseX}, ${mouseY}`);
+  return false;
 }
