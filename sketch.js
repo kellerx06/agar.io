@@ -45,7 +45,7 @@ function draw() {
     rect(0, 0, 0, 0);
     fill(0);
     textSize(50);
-    text('RESET', 320, 455);
+    text('RESET', 0, 0);
     pop();
   } else {
     background(0);
@@ -72,3 +72,8 @@ function draw() {
       paused = !paused;
       }
     }
+
+function mouseMoved() {
+  console.log(`${mouseX}, ${mouseY}`);
+  return false;
+}
