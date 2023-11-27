@@ -81,5 +81,3 @@ function mouseMoved() {
 function mousePressed() {
   blob.reset();
 }
-
-}
