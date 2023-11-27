@@ -42,10 +42,10 @@ function draw() {
     console.log('PAUSED');
 
     fill(255);
-    rect(0, 0, 0, 0);
+    rect(945, 693, 0, 0);
     fill(0);
     textSize(50);
-    text('RESET', 0, 0);
+    text('RESET', 945, 693);
     pop();
   } else {
     background(0);
