@@ -42,10 +42,10 @@ function draw() {
     console.log('PAUSED');
 
     fill(255);
-    rect(850, 700, 200, 75);
+    rect(840, 700, 200, 75);
     fill(0);
     textSize(50);
-    text('RESET', 950, 745);
+    text('RESET', 940, 745);
     pop();
   } else {
     background(0);
@@ -76,4 +76,8 @@ function draw() {
 function mouseMoved() {
   console.log(`${mouseX}, ${mouseY}`);
   return false;
+}
+
+function reset(){
+
 }
