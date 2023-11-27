@@ -40,6 +40,13 @@ function draw() {
     const middleY = height/2;
     text('PAUSED', middleX, middleY);
     console.log('PAUSED');
+
+    fill(255);
+    rect(300, 400, 200, 75);
+    fill(0);
+    textSize(50);
+    text('RESET', 320, 455);
+    pop();
   } else {
     background(0);
     fill(255, 255, 255)
