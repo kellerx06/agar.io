@@ -42,7 +42,7 @@ function draw() {
     console.log('PAUSED');
 
     fill(255);
-    rect(300, 400, 200, 75);
+    rect(0, 0, 0, 0);
     fill(0);
     textSize(50);
     text('RESET', 320, 455);
