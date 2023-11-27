@@ -45,7 +45,7 @@ function draw() {
     rect(800, 700, 200, 75);
     fill(0);
     textSize(50);
-    text('RESET', 850, 750);
+    text('RESET', 890, 730);
     pop();
   } else {
     background(0);
