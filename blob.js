@@ -34,3 +34,7 @@ function Blob(x, y, r) {
     ellipse(this.pos.x, this.pos.y, this.r * 2, this.r * 2);
   };
 }
+
+Blob.prototype.flash = function () {
+  this.color = color(random(255), random(255), random(255));
+};
