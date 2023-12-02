@@ -91,10 +91,10 @@ function keyPressed() {
 }
 
 
-function mouseMoved() {
-  console.log(`${mouseX}, ${mouseY}`);
-  return false;
-}
+//function mouseMoved() {
+ // console.log(`${mouseX}, ${mouseY}`);
+  //return false;
+//}
 
 function resetGame() {
   blob = new Blob(0, 0, 64);
