@@ -7,7 +7,6 @@ var blob;
 var blobs = [];
 var zoom = 1;
 
-var flashingColors = false;
 
 let counter = 0;
 let myColor;
@@ -84,9 +83,6 @@ function keyPressed() {
     paused = !paused;
   } else if (key === "c") {
     flashingColors = !flashingColors;
-    if (flashingColors) {
-      flashColors(); // Flash colors when "c" key is pressed
-    }
   }
 }
 
@@ -115,6 +111,8 @@ function mousePressed() {
     resetGame();
   }
 }
+
+var flashingColors = false;
 
 function flashColors() {
   for (var i = 0; i < blobs.length; i++) {
