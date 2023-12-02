@@ -4,7 +4,6 @@
 // Code for: https://youtu.be/JXuxYMGe4KI
 
 var blob;
-
 var blobs = [];
 var zoom = 1;
 
@@ -88,5 +87,16 @@ function mouseMoved() {
 }
 
 function mousePressed() {
-  blob.reset();
+  // Check if the mouse is within the boundaries of the reset button
+  if (mouseX > 840 && mouseX < 1040 && mouseY > 700 && mouseY < 775) {
+    // Reset the game
+    blob.reset();
+    blobs = [];
+    score = 0;
+    for (var i = 0; i < 1000; i++) {
+      var x = random(-width, width);
+      var y = random(-height, height);
+      blobs[i] = new Blob(x, y, 16);
+    }
+  }
 }
