@@ -85,6 +85,11 @@ function keyPressed() {
     flashingColors = !flashingColors;
   }
   
+  // Call flashColors only when "c" key is pressed
+  if (flashingColors) {
+    flashColors();
+  }
+}
 
 
 //function mouseMoved() {
