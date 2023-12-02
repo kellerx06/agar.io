@@ -67,13 +67,13 @@ function draw() {
     }
     blob.show();
     blob.update();
+    resetMatrix();
+    textSize(32);
+    fill(255);
+    text("Score: " + score, 50, 50);
  }
- resetMatrix();
- fill(255);
- textSize(32);
- textAlign(LEFT);
- text("SCORE: " + score, 20, 20);
 }
+
 
   function keyPressed() {
     if(key === 'p') {
