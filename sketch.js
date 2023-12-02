@@ -74,10 +74,12 @@ function draw() {
     textSize(32);
     fill(255);
     text("Score: " + score, 50, 50);
-    if (flashingColors) {
-      flashColors();
+    
+    // Move the flashColors function outside of the if condition
+    flashColors();
   }
 }
+
 
 function keyPressed() {
   if (key === "p") {
@@ -117,10 +119,4 @@ function flashColors() {
   for (var i = 0; i < blobs.length; i++) {
     blobs[i].flash();
   }
-}
-
-if (!Blob.prototype.flash) {
-  Blob.prototype.flash = function () {
-    this.color = color(random(255), random(255), random(255));
-  };
 }
