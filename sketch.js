@@ -87,7 +87,7 @@ function mouseMoved() {
 }
 
 function resetGame() {
-  blob.reset();
+  blob = new Blob(0, 0, 64);
   blobs = [];
   score = 0;
   for (var i = 0; i < 1000; i++) {
