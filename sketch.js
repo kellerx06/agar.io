@@ -32,9 +32,10 @@ function draw() {
     updateBlob();
     drawBlobs();
     drawScore();
-    if (flashingColors) {
-      flashColors();
-    }
+  }
+
+  if (flashingColors) {
+    flashColors();
   }
 }
 
