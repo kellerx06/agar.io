@@ -7,6 +7,8 @@ var blob;
 var blobs = [];
 var zoom = 1;
 
+var flashingColors = false;
+
 let counter = 0;
 let myColor;
 
@@ -72,14 +74,22 @@ function draw() {
     textSize(32);
     fill(255);
     text("Score: " + score, 50, 50);
+    if (flashingColors) {
+      flashColors();
   }
 }
 
 function keyPressed() {
   if (key === "p") {
     paused = !paused;
+  } else if (key === "c") {
+    flashingColors = !flashingColors;
+    if (flashingColors) {
+      flashColors(); // Flash colors when "c" key is pressed
+    }
   }
 }
+
 
 function mouseMoved() {
   console.log(`${mouseX}, ${mouseY}`);
@@ -103,5 +113,11 @@ function mousePressed() {
     // Reset the game
     paused = false; // Unpause the game
     resetGame();
+  }
+}
+
+function flashColors() {
+  for (var i = 0; i < blobs.length; i++) {
+    blobs[i].flash();
   }
 }
