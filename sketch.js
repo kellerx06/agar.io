@@ -74,9 +74,6 @@ function draw() {
     textSize(32);
     fill(255);
     text("Score: " + score, 50, 50);
-    
-    // Move the flashColors function outside of the if condition
-    flashColors();
   }
 }
 
@@ -86,6 +83,11 @@ function keyPressed() {
     paused = !paused;
   } else if (key === "c") {
     flashingColors = !flashingColors;
+  }
+  
+  // Call flashColors only when "c" key is pressed
+  if (flashingColors) {
+    flashColors();
   }
 }
 
