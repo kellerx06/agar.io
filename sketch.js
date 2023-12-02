@@ -90,6 +90,7 @@ function mousePressed() {
   // Check if the mouse is within the boundaries of the reset button
   if (mouseX > 840 && mouseX < 1040 && mouseY > 700 && mouseY < 775) {
     // Reset the game
+    paused = false; // Unpause the game
     blob.reset();
     blobs = [];
     score = 0;
