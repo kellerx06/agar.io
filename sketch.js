@@ -8,10 +8,12 @@ var blob;
 var blobs = [];
 var zoom = 1;
 
-let counter = 0
+let counter = 0;
 let myColor;
 
 var paused = false;
+
+var paused = 0;
 
 function setup() {
   createCanvas(1900, 1000);
@@ -60,11 +62,17 @@ function draw() {
       blobs[i].show();
       if (blob.eats(blobs[i])) {
         blobs.splice(i, 1);
+        score++;
     }
     }
     blob.show();
     blob.update();
  }
+ resetMatrix();
+ fill(255);
+ textSize(32);
+ textAlign(LEFT);
+ text("SCORE: " + score, 20, 20);
 }
 
   function keyPressed() {
