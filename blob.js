@@ -7,7 +7,7 @@ function Blob(x, y, r) {
   this.pos = createVector(x, y);
   this.r = r;
   this.vel = createVector(0, 0);
-  this.col =(random(255), random(255), random(255));
+  this.col =(random(255), random(100), random(255));
 
   this.update = function() {
     var newvel = createVector(mouseX - width / 2, mouseY - height / 2);
