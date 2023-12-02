@@ -7,6 +7,7 @@ var blob;
 var blobs = [];
 var zoom = 1;
 
+var flashingColors = false;
 
 let counter = 0;
 let myColor;
@@ -112,10 +113,14 @@ function mousePressed() {
   }
 }
 
-var flashingColors = false;
-
 function flashColors() {
   for (var i = 0; i < blobs.length; i++) {
     blobs[i].flash();
   }
+}
+
+if (!Blob.prototype.flash) {
+  Blob.prototype.flash = function () {
+    this.color = color(random(255), random(255), random(255));
+  };
 }
