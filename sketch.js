@@ -13,14 +13,14 @@ let myColor;
 
 var paused = false;
 
-var paused = 0;
+var score = 0;
 
 function setup() {
   createCanvas(1900, 1000);
   myColor = color(random(255), random(255), random(255));
   frameRate(30);
   blob = new Blob(0, 0, 64);
-  fill(myColor)
+  fill(myColor);
   for (var i = 0; i < 1000; i++) {
     var x = random(-width, width);
     var y = random(-height, height);
@@ -35,23 +35,23 @@ function setup() {
 
 function draw() {
   if (paused) {
-    textSize(100) 
+    textSize(100);
     fill(255, 0, 0);
-    textAlign(CENTER, CENTER)
-    const middleX = width/2;
-    const middleY = height/2;
-    text('PAUSED', middleX, middleY);
-    console.log('PAUSED');
+    textAlign(CENTER, CENTER);
+    const middleX = width / 2;
+    const middleY = height / 2;
+    text("PAUSED", middleX, middleY);
+    console.log("PAUSED");
 
     fill(255);
     rect(840, 700, 200, 75);
     fill(0);
     textSize(50);
-    text('RESET', 940, 745);
+    text("RESET", 940, 745);
     pop();
   } else {
     background(0);
-    fill(255, 255, 255)
+    fill(255, 255, 255);
     translate(width / 2, height / 2);
     var newzoom = 64 / blob.r;
     zoom = lerp(zoom, newzoom, 0.1);
@@ -63,23 +63,24 @@ function draw() {
       if (blob.eats(blobs[i])) {
         blobs.splice(i, 1);
         score++;
+      }
     }
-    }
+
     blob.show();
     blob.update();
+
     resetMatrix();
     textSize(32);
     fill(255);
     text("Score: " + score, 50, 50);
- }
+  }
 }
 
-
-  function keyPressed() {
-    if(key === 'p') {
-      paused = !paused;
-      }
-    }
+function keyPressed() {
+  if (key === "p") {
+    paused = !paused;
+  }
+}
 
 function mouseMoved() {
   console.log(`${mouseX}, ${mouseY}`);
