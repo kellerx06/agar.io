@@ -100,8 +100,8 @@ function keyPressed() {
 }
 
 function keyReleased() {
-  if (key === " ") {
-    // Spacebar released, reset speed to normal
+  if (key === "s") {
+    // skey released, reset speed to normal
     speedMultiplier = 1;
   }
 }
