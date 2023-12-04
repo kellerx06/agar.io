@@ -20,7 +20,7 @@ var score = 0;
 var speedMultiplier = 1;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight); 
+  createCanvas(1900, 1000);
   myColor = color(random(255), random(255), random(255));
   frameRate(30);
   blob = new Blob(0, 0, 64);
