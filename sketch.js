@@ -88,7 +88,7 @@ function keyPressed() {
     paused = !paused;
   } else if (key === "c") {
     flashingColors = !flashingColors;
-  } else if (key === " ") {
+  } else if (key === "s") {
     // Spacebar pressed, increase speed
     speedMultiplier = 2; // You can adjust this multiplier as needed
   }
